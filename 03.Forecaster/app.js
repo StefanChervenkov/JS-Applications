@@ -12,7 +12,7 @@ function attachEvents() {
         if (locationInput == '') {
             return;
         }
-        
+
         let locationCode = '';
         fetch(`${baseUrl}/locations`)
             .then(res => res.json())
@@ -26,8 +26,7 @@ function attachEvents() {
 
                 if (locationCode == '') {
                     throw new Error("Error");
-                    
-                }
+                };
                 
                 // make new requests to collect forecast for current and upcoming conditions
                 
